@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Detail</title>
+</head>
+<body>
+    <h1>Employee Detail</h1>
+    <h2>{{ employee }}</h2>
+    <ul>
+        {% for record in attendance_records %}
+            <li>{{ record.name }} - {{ record.att_dt }} - {{ record.get_att_typ_display }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

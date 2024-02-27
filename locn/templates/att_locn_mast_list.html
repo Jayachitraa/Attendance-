@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AttLocnMast List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>AttLocnMast List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Location Code</th>
+                <th>Location Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for att_locn_mast in att_locn_mast_objects %}
+                <tr>
+                    <td>{{ att_locn_mast.locn_code }}</td>
+                    <td>{{ att_locn_mast.locn_name }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'att_mast_gat_tat_list' %}">Go to AttMastGatTat List</a><br>
+    <a href="{% url 'create_att_locn_mast' %}">Create a new Location master</a>
+</body>
+</html>

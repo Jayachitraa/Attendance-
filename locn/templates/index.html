@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Index</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: block;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Index</h1>
+    <ul>
+        <li><a href="{% url 'create_att_locn_mast' %}">Create AttLocnMast</a></li>
+        <li><a href="{% url 'create_att_mast_gat_tat' %}">Create AttMastGatTat</a></li>
+        <li><a href="{% url 'create_att_det_gat_tat' %}">Create AttDetGatTat</a></li>
+      
+    </ul>
+</body>
+</html>
+ 
